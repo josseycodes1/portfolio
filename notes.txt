@@ -1,0 +1,85 @@
+1-
+
+2- Overview of Django
+
+3 - Test Python
+
+4 - Create Virtual Enviroment where you install packages, to isolate from other packages.
+"py -3 -m venv env"
+
+5- Activate enviroment.
+
+if Windows disable running such scripts, fix with POWERSHELL as admin
+"py"
+
+*then Activate;
+".\env\Scrpts\activate"
+
+6 - install Django "python -m pip install django"
+test django - " python -m django --version"
+
+7 Start a new project
+"django-admin startproject myportfolio
+
+8- Check project
+"python manage.py runserver"
+
+9- create an app
+python manage.py startapp (name of app)
+
+10- Add app to settings
+
+11- install pillow a python imaging library
+
+*models - where describe all our files 
+
+12- create models and apply Migrations
+"python manage.py makemigrations"
+python manage.py migrate
+
+13 - Create super user
+
+14 Add string methods - defines and shows the actual name of inputs under the classes.
+
+15 - configure static files
+STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+16 - Tell django where to find static and media files while on browser.
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+    document_root=settings.MEDIA_ROOT)
+
+ NOTE: you have to import settings and static for it to work in urls.py
+    from django.conf import settings
+    from django.conf.urls.static import static
+
+PART  3 VIEWS & TEMPLATES
+17- Write basic view, add index.html in app template folder and configure app url
+
+def index(request):
+    return render(request, 'index.html')
+18- Add assets folder to static_root folder
+
+Frontend https://github.com/bedimcode/responsive-portfolio-website-JhonDoe
+19- Load static files in html file
+{% load static %}
+
+20- Write Views
+
+21- Add Data in Admin interface
+
+22- Load content from views to Templates
+
+{% static 'assets/css/styles.css' %}
+
+{{ model.field }}
+Check DEPLOYMENT
