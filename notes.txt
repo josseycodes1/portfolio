@@ -15,6 +15,7 @@ if Windows disable running such scripts, fix with POWERSHELL as admin
 *then Activate;
 ".\env\Scrpts\activate"
 
+
 6 - install Django "python -m pip install django"
 test django - " python -m django --version"
 
